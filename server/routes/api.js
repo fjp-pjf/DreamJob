@@ -190,8 +190,9 @@ router.post('/apply',multer({ storage: storage }).single("resume"),(req, res)=>{
        resume: url + "/resumes/" + req.file.filename
    }
   var candata = new Candata(candata);
-  candata.save().then((res)=>{
-    console.log('profile added successfully',res);
+  candata.save().then((ress)=>{
+    console.log('profile added successfully',ress);
+    res.status(200).send({message:'sheldon cooper&penny'})
   })
   .catch((err)=>{
       console.log('error adding profile',err);

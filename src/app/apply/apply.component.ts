@@ -19,6 +19,7 @@ export class ApplyComponent implements OnInit {
   }
 
    applyUser(){
+     console.log('test');
     this._auth.applyUser(this.applyUserData,this.resume)
     .subscribe(
       res=> {
