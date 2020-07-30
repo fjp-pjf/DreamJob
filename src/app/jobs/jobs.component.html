@@ -1,0 +1,19 @@
+<div class="card m-5"  *ngFor="let job of jobs; let i = index">
+    <div class="card-header">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{job.jobId}}</h5>
+      <p class="card-text">{{job.jobName}}</p>
+      <p class="card-text">{{job.jobCompany}}</p>
+      <p class="card-text">{{job.jobDate}}.{{job.jobSalary}}</p>
+      <p class="card-text">{{job.jobDescription}}</p>
+      <a [routerLink]="['jobdetails',job._id]" class="btn btn-primary">Apply</a>
+      <!-- <a routerLink="/jobdetails/{{job._id}}" class="btn btn-primary">Apply</a> -->
+      <a [routerLink]="['update',job._id]" *ngIf="_authService.loggedIn() &&  _authService.getIsAdmin()"><button type="button" class="btn btn-warning float-right m-3">Update</button></a>
+      <button *ngIf="_authService.loggedIn() &&  _authService.getIsAdmin()" type="button" (click)=delete(job,i) class="btn btn-danger float-right m-3">Delete</button>
+    </div>
+</div>
+
+
+

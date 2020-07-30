@@ -1,0 +1,18 @@
+    <div class="card m-5">
+        <div class="card-header">
+            <h3>{{title}}</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">JobName: {{jobItem.jobName}}</p>
+          <p class="card-text">JobCompany: {{jobItem.jobCompany}}</p>
+          <p class="card-text">JobDate: {{jobItem.jobDate}}</p>
+          <p class="card-text">JobSalary: {{jobItem.jobSalary}}</p>
+          <p class="card-text">JobDescription: {{jobItem.jobDescription}}</p>
+        </div>
+        <div class="card-footer">
+            <a routerLink="/apply" class="btn btn-primary">Apply Now</a>
+            <a class="btn btn-primary" (click)='back()'>Go Back</a>
+        </div> 
+    </div>
+
+

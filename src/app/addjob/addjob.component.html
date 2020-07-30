@@ -1,0 +1,44 @@
+<div class="card m-5">
+    <form (ngSubmit)="AddJob()">
+        <div class="card-header">
+            <h3>{{title}}</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><label>Job Id</label></td>
+                            <td><input type="text" name="j_id" [(ngModel)]="jobItem.jobId"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Job Name</label></td>
+                            <td><input type="text" name="j_name" [(ngModel)]="jobItem.jobName"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Job Company</label></td>
+                            <td><input type="text" name="j_comp" [(ngModel)]="jobItem.jobCompany"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Job Salary</label></td>
+                            <td><input type="text" name="j_salary" [(ngModel)]="jobItem.jobSalary"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Job Date</label></td>
+                            <td><input type="text" name="j_date" [(ngModel)]="jobItem.jobDate"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Job Description</label></td>
+                            <td><input type="text" name="j_desc" [(ngModel)]="jobItem.jobDescription"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit" class="btn btn-success">Submit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
